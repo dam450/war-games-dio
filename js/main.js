@@ -36,6 +36,7 @@ function start() {
     movefundo()
     movejogador()
     moveinimigo1()
+    moveinimigo2()
   } // Fim da função loop()
 
   //Função que movimenta o fundo do jogo
@@ -80,4 +81,13 @@ function start() {
       $('#inimigo1').css('top', posicaoY)
     }
   } //Fim da função moveinimigo1()
+
+  function moveinimigo2() {
+    posicaoX = parseInt($('#inimigo2').css('left'))
+    $('#inimigo2').css('left', posicaoX - 3)
+
+    if (posicaoX <= 0) {
+      $('#inimigo2').css('left', 775)
+    }
+  } // Fim da função moveinimigo2()
 } // Fim da função start
